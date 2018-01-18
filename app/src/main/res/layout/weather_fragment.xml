@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/location_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:textColor="#fff"
+                    android:padding="5dp"
+                    android:background="#0050A6F4"/>
+                <FrameLayout
+                    android:background="#00000000"
+                    android:id="@+id/frame_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#c0444444">
+                    <!--实时天气-->
+                    <include layout="@layout/now_weather"
+                        />
+                    <!--6天天气预报详情-->
+                    <View
+                        android:background="#838383"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/forecast_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
+                    <View
+                        android:background="#838383"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <!--7天天气变化曲线-->
+                    <include layout="@layout/daily_forecast"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#838383" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+           </ScrollView>
+
+</LinearLayout>

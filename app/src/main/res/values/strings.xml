@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">正常的天气预报</string>
+    <string name="temp_unit">°</string>
+</resources>
